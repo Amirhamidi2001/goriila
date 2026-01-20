@@ -15,6 +15,9 @@
             <li>
               <a href="{% url 'website:index' %}">صفحه اصلی</a>
             </li>
+            <li>
+              <a href="{% url 'blog:post-list' %}">بازگشت</a>
+            </li>
             <li class="current">پست {{ post.id }}</li>
           </ol>
         </nav>

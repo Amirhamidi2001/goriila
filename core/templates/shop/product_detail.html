@@ -15,6 +15,9 @@
             <li>
               <a href="{% url 'website:index' %}">صفحه اصلی</a>
             </li>
+            <li>
+              <a href="{% url 'shop:product-list' %}">بازگشت</a>
+            </li>
             <li class="current">{{ product.name }}</li>
           </ol>
         </nav>
@@ -140,7 +143,9 @@
                       
                       
                       
+                      
                       حذف از لیست علاقه‌مندی‌ها
+
 
 
 
@@ -148,7 +153,9 @@
                       
                       
                       
+                      
                       افزودن به لیست علاقه‌مندی‌ها
+
 
 
 
@@ -437,10 +444,10 @@
   <script>
     function toggleWishlist(product_id) {
       {% if not user.is_authenticated %}
-    alert('برای افزودن به لیست علاقه‌مندی‌ها ابتدا وارد حساب کاربری خود شوید.');
-    window.location.href = "{% url 'accounts:login' %}?next={{ request.path }}";
-    return;
-  {% endif %}
+      alert('برای افزودن به لیست علاقه‌مندی‌ها ابتدا وارد حساب کاربری خود شوید.');
+      window.location.href = "{% url 'accounts:login' %}?next={{ request.path }}";
+      return;
+      {% endif %}
       const icon = $('#wishlist-icon-' + product_id)
       const btn = $('#wishlist-btn-' + product_id)
     
