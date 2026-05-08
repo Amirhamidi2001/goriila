@@ -100,4 +100,6 @@ The app will be available at `http://localhost:8000`.
 
 This project is licensed under the [MIT License](LICENSE).
 
-```
+## Author
+
+**Amir Hamidi** – [GitHub](https://github.com/Amirhamidi2001)
